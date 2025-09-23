@@ -1,0 +1,6 @@
+coqui-tts
+torchcodec
+fastapi==0.115.0
+loguru==0.7.2
+uvicorn==0.31.0
+pydantic_settings
