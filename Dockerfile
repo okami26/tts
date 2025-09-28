@@ -8,6 +8,8 @@ COPY voice.wav .
 
 RUN pip install --no-cache-dir -r req.txt
 
+RUN pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
+
 ENV COQUI_TOS_AGREED=1
 
 COPY . .
