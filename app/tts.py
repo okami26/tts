@@ -9,7 +9,7 @@ from app.config import settings
 
 class TTSGenerator:
     def __init__(self, model_name, vocoder_name, speaker_wav):
-        self.tts = TTS(model_name=model_name, vocoder_name=vocoder_name, progress_bar=True).to("cpu")
+        self.tts = TTS(model_name=model_name, vocoder_name=vocoder_name, progress_bar=True).to("cuda")
         self.speaker_wav = speaker_wav
 
     def generate_tts(self, text):
