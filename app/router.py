@@ -34,3 +34,7 @@ async def generate_message(text: str):
     except Exception as e:
         logger.error(f"Произошла ошибка при ответе пользователю: {e}")
         raise HTTPException(status_code=500, detail="Ошибка генерации аудио")
+
+router.get("/test")
+async def test():
+    return "Hello"
