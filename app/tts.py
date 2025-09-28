@@ -4,6 +4,8 @@ from TTS.api import TTS
 import soundfile as sf
 from loguru import logger
 
+from app.config import settings
+
 
 class TTSGenerator:
     def __init__(self, model_name, vocoder_name, speaker_wav):
@@ -31,5 +33,5 @@ class TTSGenerator:
 
 tts_generator = TTSGenerator(model_name="tts_models/multilingual/multi-dataset/xtts_v2",
                              vocoder_name="vocoder_models/universal/libri-tts/fullband-melgan",
-                             speaker_wav=r"C:\Users\anton\PycharmProjects\AnimeGirl\app\api\У-меня-есть-к-тебе-просьба.wav"
+                             speaker_wav=settings.VOICE_PATH
                              )
